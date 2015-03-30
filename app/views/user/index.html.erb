@@ -1,0 +1,35 @@
+<h1>Signup Using Rhythmo</h1>
+
+
+<!-- <form action="/">
+<label>Username</label>
+<input id="username" type="text" placeholder="JohnDoe">
+<br>
+<label>Rhythm</label>
+<input id="rhythm" type="password">
+<br>
+<input type="submit" value="Submit">
+</form> -->
+
+<%= form_for(@user, remote: true) do |f| %>
+  <%= f.label :username %><br>
+  <%= f.text_field :username %><br>
+  <%= f.label :rhythm %><br>
+  <%= f.password_field :rhythm %><br>
+  <%= f.submit %>
+<% end %>
+
+<div class="timer"></div>
+
+<div class="rhythm"></div>
+
+<table id="rhythmValues">
+  <thead>
+  <tr>
+    <th>Key</th>
+    <th>Time</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
